@@ -1,41 +1,40 @@
 <html>
+
   <head>
     <title>Note</title>
     <link rel="stylesheet" href="main.css" />
     <script type="application/javascript" src="app.js"></script>
-    <script type="application/javascript" src="localForage.js"></script>
   </head>
+
   <body onload="execOnLoad();">
     <div class="top">
       <button onclick="loadNewFile()">new</button>
-      <button onclick="saveToLocalStorage()">save</button>
+      <button id="savebutton" onclick="saveToLocalStorage()">save</button>
       <button onclick="deleteCurrentFile()">delete</button>
+      <button id="markdownbutton" onclick="markdownContent()">markdown</button>
       <button class="showmult" id="showmult" onclick="clearLocalStorage()">
-        remove all
+        delete all
       </button>
       <br /><br />
       <span class="help" id="help"></span>
       <br />
     </div>
-    <div
-      id="content"
-      class="bottom"
-      placeholder="content"
-      contenteditable
-    ></div>
+    <div id="content" class="bottom" placeholder="content" contenteditable=true></div>
     <br />
     <div class="version">
       <details>
-        <summary style="float: left">0.3.0</summary>
-        <span style="float: left; margin-left: 5px"
-          >&nbsp;&nbsp;❯❯❯&nbsp;&nbsp;</span
-        ><a
-          style="float: left; margin-left: 5px"
-          href="https://unforswearing.com"
-          >unforswearing.com</a
-        >
+        <summary style="float: left; text-decoration: underline;">v0.4.3</summary>
+        <span style="float: left; margin-left: 5px; font-size: 70%;">
+          &nbsp;❯❯❯&nbsp;
+        </span>
+        <div style="float: left; margin-left: 5px;">
+          'note' is a tiny localStorage-based notepad |
+          <a href="https://github.com/unforswearing/note">github</a> | 
+          <a href="https://unforswearing.com">home</a>
+        </div>
       </details>
     </div>
     <script></script>
   </body>
+
 </html>
